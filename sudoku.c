@@ -143,7 +143,10 @@ Node* DFS(Node* initial, int* cont){
       aux = next(adj);
     }
     free(n);
+    cont++;
   }
+  printf("%i",cont);
+
   return NULL;
 }
 
