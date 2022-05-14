@@ -7,7 +7,6 @@ typedef struct{
    int sudo[9][9];
 }Node;
 
-void printfMatriz(Node*);
 
 Node* createNode(){
   Node* n=(Node*) malloc(sizeof(Node));
@@ -164,15 +163,4 @@ int main( int argc, char *argv[] ){
 
   return 0;
 }
-
-void printfMatriz(Node *n){
-  int i,j;
-  printf("\n********MATRIZ**************\n");
-  for(i = 0 ; i < 9 ; i++){
-    for(j = 0 ;j < 9 ; j++){
-      printf("%i ",n->sudo[i][j]);
-    }
-    printf("\n");
-  }
-  printf("******************************\n");
-}*/
+*/
