@@ -48,10 +48,10 @@ void print_node(Node* n){
 int recorrer_ileras(Node* n,int i, int j){
   int k;
   for(k = 0 ; k < 9 ; k++){
-    if(n->sudo[i][k] == n->sudo[i][j] && k != j) return 1;
+    if(n->sudo[i][k] == n->sudo[i][j] && k != j && n->sudo[i][k] != 0) return 1;
   }
   for(k = 0 ; k < 9 ; k++){
-    if(n->sudo[k][j] == n->sudo[i][j] && k != i) return 1;
+    if(n->sudo[k][j] == n->sudo[i][j] && k != i && n->sudo[k][j] != 0) return 1;
   }
   return 0;
 }
@@ -62,7 +62,7 @@ int recorrer_sub(Node* n,int i,int j){
     for(h = 0 ; h < 3 ; h++){
       for(k = 0 ; k < 3 ; k++){
         for(l = 0 ; l < 3 ; l++){
-          if(n->sudo[m+3*i][h+3*j] == n->sudo[k+3*i][l+3*j] && k != m && l != h) return 1;
+          if(n->sudo[m+3*i][h+3*j] == n->sudo[k+3*i][l+3*j] && k != m && l != h && n->sudo[m+3*i][h+3*j] != 0) return 1;
         }
       }
     }
