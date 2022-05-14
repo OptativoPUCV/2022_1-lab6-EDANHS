@@ -91,6 +91,7 @@ List* get_adj_nodes(Node* n){
         if(n->sudo[i][j]==0){
           for(k = 1;k < 10;k++){
             n->sudo[i][j] = k;
+            printfMatriz(n);
             if(is_valid(n)){
               Node*adj=copy(n);
               pushBack(list,adj);
@@ -127,3 +128,15 @@ int main( int argc, char *argv[] ){
 
   return 0;
 }*/
+
+void printfMatriz(Node *n){
+  int i,j;
+  printf("\n********MATRIZ**************\n");
+  for(i = 0 ; i < 9 ; i++){
+    for(j = 0 ;j < 9 ; j++){
+      printf("%i ",n->sudo[i][j]);
+    }
+    printf("\n");
+  }
+  printf("******************************\n");
+}

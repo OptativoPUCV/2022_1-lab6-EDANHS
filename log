@@ -68,3 +68,21 @@ Sat May 14 16:47:49 HSP 2022:
  tests:  0|5
 total_score: 0/70
 7d8dadd
+Sat May 14 16:50:52 HSP 2022: 
+ sudoku.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:94:13: error: implicit declaration of function 'printfMatriz' [-Werror=implicit-function-declaration]
+             printfMatriz(n);
+             ^~~~~~~~~~~~
+sudoku.c: At top level:
+sudoku.c:132:6: error: conflicting types for 'printfMatriz' [-Werror]
+ void printfMatriz(Node *n){
+      ^~~~~~~~~~~~
+sudoku.c:94:13: note: previous implicit declaration of 'printfMatriz' was here
+             printfMatriz(n);
+             ^~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+dd639b5
