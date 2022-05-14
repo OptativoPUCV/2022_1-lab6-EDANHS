@@ -3,10 +3,11 @@
 #include "list.h"
 
 
-void printfMatriz(Node*);
 typedef struct{
    int sudo[9][9];
 }Node;
+
+void printfMatriz(Node*);
 
 Node* createNode(){
   Node* n=(Node*) malloc(sizeof(Node));

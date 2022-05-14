@@ -107,3 +107,9 @@ sudoku.c:95:13: note: previous implicit declaration of 'printfMatriz' was here
 cc1.exe: all warnings being treated as errors
 Compilation failed
 6bae15f
+Sat May 14 16:52:06 HSP 2022: 
+ sudoku.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  0|5
+total_score: 0/70
+0f06fb5
