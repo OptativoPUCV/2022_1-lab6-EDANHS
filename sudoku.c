@@ -69,6 +69,15 @@ int recorrer_sub(Node* n,int i,int j){
 }
 
 int is_valid(Node* n){
+  int i,j;
+  //submatriz
+
+  //ileras
+  for(i = 0 ; i < 9 ; i++){
+    for(j = 0 ; j < 9 ;j++){
+      if(recorrer_ileras(n,i,j) == 1) return 0;
+    }
+  }
 
     return 1;
 }
