@@ -3,6 +3,7 @@
 #include "list.h"
 
 
+void printfMatriz(Node*);
 typedef struct{
    int sudo[9][9];
 }Node;

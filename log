@@ -86,3 +86,24 @@ sudoku.c:94:13: note: previous implicit declaration of 'printfMatriz' was here
 cc1.exe: all warnings being treated as errors
 Compilation failed
 dd639b5
+Sat May 14 16:51:21 HSP 2022: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:0:
+sudoku.c:6:19: error: unknown type name 'Node'
+ void printfMatriz(Node*);
+                   ^~~~
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:95:13: error: implicit declaration of function 'printfMatriz' [-Werror=implicit-function-declaration]
+             printfMatriz(n);
+             ^~~~~~~~~~~~
+sudoku.c: At top level:
+sudoku.c:133:6: error: conflicting types for 'printfMatriz' [-Werror]
+ void printfMatriz(Node *n){
+      ^~~~~~~~~~~~
+sudoku.c:95:13: note: previous implicit declaration of 'printfMatriz' was here
+             printfMatriz(n);
+             ^~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+6bae15f
