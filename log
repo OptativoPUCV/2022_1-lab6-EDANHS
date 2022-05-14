@@ -181,3 +181,14 @@ Sat May 14 18:00:19 HSP 2022:
  1 file changed, 2 deletions(-)
  tests:  0|0
 d22982b
+Sat May 14 18:09:47 HSP 2022: 
+ sudoku.c | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'recorrer_ileras':
+sudoku.c:49:7: error: 'k' undeclared (first use in this function)
+   for(k = 0 ; k < 9 ; k++){
+       ^
+sudoku.c:49:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+701c756
