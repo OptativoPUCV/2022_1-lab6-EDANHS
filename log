@@ -160,3 +160,14 @@ Sat May 14 17:55:55 HSP 2022:
  tests:  7|1
 total_score: 55/70
 3a33a49
+Sat May 14 17:56:31 HSP 2022: 
+ sudoku.c | 18 +++++++++++++++++-
+ 1 file changed, 17 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:131:9: error: implicit declaration of function 'size' [-Werror=implicit-function-declaration]
+   while(size(pila) != 0){
+         ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+e7b7cc2
