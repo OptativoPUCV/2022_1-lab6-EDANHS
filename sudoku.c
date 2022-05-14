@@ -76,8 +76,6 @@ int is_valid(Node* n){
   for(i = 0 ; i < 3 ; i++){
     for(j = 0 ; j < 3 ; j++){
       if(recorrer_sub(n,i,j)==1){
-        printf("Cuadrante [%i][%i]\n",i,j);
-        printf("Invalido\n");
         return 0;
       }
     }
