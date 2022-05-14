@@ -46,6 +46,7 @@ void print_node(Node* n){
 }
 
 int recorrer_ileras(Node* n,int i, int j){
+  int k;
   for(k = 0 ; k < 9 ; k++){
     if(n->sudo[i][k] == n->sudo[i][j] && k != j && n->sudo[i][k] != 0) return 1;
   }
