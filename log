@@ -171,3 +171,8 @@ sudoku.c:131:9: error: implicit declaration of function 'size' [-Werror=implicit
 cc1.exe: all warnings being treated as errors
 Compilation failed
 e7b7cc2
+Sat May 14 17:58:43 HSP 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  8|0
+27d21125

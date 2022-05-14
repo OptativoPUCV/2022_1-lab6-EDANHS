@@ -128,8 +128,8 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
   Stack *pila = createStack();
   push(pila,initial);
-  while(size(pila) != 0){
-    Node *n = front(pila);
+  while(pila != NULL){
+    Node *n = top(pila);
     pop(pila);
     if(is_final(n) == 1) return n;
 
