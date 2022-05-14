@@ -25,3 +25,22 @@ Sat May 14 16:27:44 HSP 2022:
  tests:  0|5
 total_score: 0/70
 47f77d2
+Sat May 14 16:43:10 HSP 2022: 
+ sudoku.c | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function 'recorrer_sub':
+sudoku.c:58:13: error: 'n' redeclared as different kind of symbol
+   int k,l,m,n;
+             ^
+sudoku.c:57:24: note: previous definition of 'n' was here
+ int recorrer_sub(Node* n,int i,int j){
+                        ^
+sudoku.c:63:15: error: invalid type argument of '->' (have 'int')
+           if(n->sudo[m+3*i][n+3*j] == n->sudo[k+3*i][l+3*j] && k != m && l != n) return 1;
+               ^~
+sudoku.c:63:40: error: invalid type argument of '->' (have 'int')
+           if(n->sudo[m+3*i][n+3*j] == n->sudo[k+3*i][l+3*j] && k != m && l != n) return 1;
+                                        ^~
+Compilation failed
+0bd2e40

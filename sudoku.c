@@ -54,13 +54,36 @@ int recorrer_ileras(Node* n,int i, int j){
   return 0;
 }
 
+int recorrer_sub(Node* n,int i,int j){
+  int k,l,m,n;
+  for(m = 0; m < 3 ; m++){
+    for(n = 0 ; n < 3 ; n++){
+      for(k = 0 ; k < 3 ; k++){
+        for(l = 0 ; l < 3 ; l++){
+          if(n->sudo[m+3*i][n+3*j] == n->sudo[k+3*i][l+3*j] && k != m && l != n) return 1;
+        }
+      }
+    }
+  }
+  return 0;
+}
+
 int is_valid(Node* n){
   int i,j;
+  //submatriz
+  for(i = 0 ; i < 3 ; i++){
+    for(j = 0 ; j < 3 ; j++){
+      if(recorrer_sub(n,i,j) == 1) return 0;
+    }
+  }
+
+  //ileras
   for(i = 0 ; i < 9 ; i++){
     for(j = 0 ; j < 9 ;j++){
       if(recorrer_ileras(n,i,j) == 1) return 0;
     }
   }
+  
 
     return 1;
 }
