@@ -101,7 +101,6 @@ List* get_adj_nodes(Node* n){
         if(n->sudo[i][j]==0){
           for(k = 1;k < 10;k++){
             n->sudo[i][j] = k;
-            //printfMatriz(n);
             if(is_valid(n)){
               Node*adj=copy(n);
               pushBack(list,adj);
@@ -144,8 +143,6 @@ Node* DFS(Node* initial, int* cont){
     free(n);
     (*cont)++;
   }
-  printf("%i",*cont);
-
   return NULL;
 }
 
