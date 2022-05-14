@@ -73,6 +73,11 @@ int recorrer_sub(Node* n,int i,int j){
 int is_valid(Node* n){
   int i,j;
   //submatriz
+  for(i = 0 ; i < 3 ; i++){
+    for(j = 0 ; j < 3 ; j++){
+      if(recorrer_sub(n,i,j)==1) return 0;
+    }
+  }
 
   //ileras
   for(i = 0 ; i < 9 ; i++){
@@ -93,7 +98,7 @@ List* get_adj_nodes(Node* n){
         if(n->sudo[i][j]==0){
           for(k = 1;k < 10;k++){
             n->sudo[i][j] = k;
-            printfMatriz(n);
+            //printfMatriz(n);
             if(is_valid(n)){
               Node*adj=copy(n);
               pushBack(list,adj);
