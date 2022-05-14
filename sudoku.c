@@ -163,7 +163,7 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}*/
+}
 
 void printfMatriz(Node *n){
   int i,j;
@@ -175,4 +175,4 @@ void printfMatriz(Node *n){
     printf("\n");
   }
   printf("******************************\n");
-}
+}*/
