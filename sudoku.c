@@ -43,8 +43,24 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+int recorrer_ileras(Node* n,int i, int j){
+  int k;
+  for(k = 0 ; k < 9 ; k++){
+    if(n->sudo[i][k] == n->sudo[i][j] && k != j) return 1;
+  }
+  for(k = 0 ; k < 9 ; k++){
+    if(n->sudo[k][j] == n->sudo[i][j] && k != i) return 1;
+  }
+}
 
+int is_valid(Node* n){
+  int i,j;
+  for(i = 0 ; i < 9 ; i++){
+    for(j = 0 ; j < 9 ;j++){
+      if(recorrer_ileras(n,i,j) == 1) return 0;
+    }
+  }
+  
     return 1;
 }
 
