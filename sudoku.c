@@ -55,12 +55,12 @@ int recorrer_ileras(Node* n,int i, int j){
 }
 
 int recorrer_sub(Node* n,int i,int j){
-  int k,l,m,n;
+  int k,l,m,h;
   for(m = 0; m < 3 ; m++){
-    for(n = 0 ; n < 3 ; n++){
+    for(h = 0 ; h < 3 ; h++){
       for(k = 0 ; k < 3 ; k++){
         for(l = 0 ; l < 3 ; l++){
-          if(n->sudo[m+3*i][n+3*j] == n->sudo[k+3*i][l+3*j] && k != m && l != n) return 1;
+          if(n->sudo[m+3*i][h+3*j] == n->sudo[k+3*i][l+3*j] && k != m && l != h) return 1;
         }
       }
     }
