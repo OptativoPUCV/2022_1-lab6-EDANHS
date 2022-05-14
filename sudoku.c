@@ -139,9 +139,7 @@ Node* DFS(Node* initial, int* cont){
     while(aux != NULL){
       push(pila,aux);
       aux = next(adj);
-      printf("2\n");
     }
-    printf("1\n");
   }
   return NULL;
 }
