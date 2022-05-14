@@ -51,6 +51,7 @@ int recorrer_ileras(Node* n,int i, int j){
   for(k = 0 ; k < 9 ; k++){
     if(n->sudo[k][j] == n->sudo[i][j] && k != i) return 1;
   }
+  return 0;
 }
 
 int is_valid(Node* n){
@@ -60,7 +61,7 @@ int is_valid(Node* n){
       if(recorrer_ileras(n,i,j) == 1) return 0;
     }
   }
-  
+
     return 1;
 }
 
